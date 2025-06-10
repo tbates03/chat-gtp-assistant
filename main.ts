@@ -1,19 +1,15 @@
-import {Readable, Stream} from "stream";
-
-const fetch = require('node-fetch');
-const vosk = require('vosk')
-const fs = require("fs");
-const SAMPLE_RATE = 44100
-const Speaker = require('speaker');
-const googleTTS = require('google-tts-api');
-const sox = require('sox-stream')
-require('dotenv').config();
-const getMP3Duration = require('get-mp3-duration')
-let chalk;
-import('chalk').then((value) => {
-    chalk = value.default;
-})
-const mic = require('mic');
+import { Readable, Stream } from "stream";
+import fetch from "node-fetch";
+import vosk from "vosk";
+import fs from "fs";
+const SAMPLE_RATE = 44100;
+import Speaker from "speaker";
+import googleTTS from "google-tts-api";
+import sox from "sox-stream";
+import "dotenv/config";
+import getMP3Duration from "get-mp3-duration";
+import chalk from "chalk";
+import mic from "mic";
 
 const MODEL_PATH = "./model/vosk-model-en-us-0.22"; const LANGUAGE = "en"
 //const MODEL_PATH = "./model/vosk-model-small-en-us-0.15"; const LANGUAGE = "en"
