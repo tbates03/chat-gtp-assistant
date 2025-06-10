@@ -3,7 +3,10 @@
     "lib": ["ES6"],
     "module": "Node16",
     "target": "ES6",
-    "sourceMap": true
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true
   },
   "exclude": [
     "node_modules"
